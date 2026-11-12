@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Français - Cap-Brevet</title>
+<style>
+body{font-family:Arial;background:#f3f0ff;margin:0;padding:20px;color:#292344}
+main{max-width:700px;margin:auto}
+h1{color:#7046d3}
+.card{background:white;padding:20px;border-radius:16px;margin:15px 0}
+textarea{width:100%;height:100px;padding:10px;box-sizing:border-box}
+button{background:#7046d3;color:white;border:0;padding:13px 20px;border-radius:10px;cursor:pointer}
+</style>
+</head>
+<body>
+<main>
+<h1>📚 Français – Cap-Brevet</h1>
+<div class="card">
+<h2>Le professeur IA</h2>
+<p>Pose ta question à ton professeur. Il t'aidera à comprendre le français.</p>
+<textarea id="question" placeholder="Exemple : Comment reconnaître une métaphore ?"></textarea>
+<br><br>
+<button onclick="repondre()">Poser ma question</button>
+<p id="reponse"></p>
+</div>
+<div class="card">
+<h2>📖 Petite leçon : les figures de style</h2>
+<p><b>La comparaison :</b> rapproche deux éléments avec un outil comme « comme ».</p>
+<p><b>La métaphore :</b> rapproche deux éléments sans outil de comparaison.</p>
+<p><b>La personnification :</b> donne des caractéristiques humaines à un objet ou un animal.</p>
+</div>
+<a href="matieres.html">⬅ Retour aux matières</a>
+</main>
+<script>
+function repondre(){
+let q=document.getElementById("question").value.trim();
+if(!q){alert("Écris une question !");return;}
+document.getElementById("reponse").innerText="Bonne question ! Pour te répondre précisément, ton professeur IA doit encore être connecté à un véritable service d'intelligence artificielle. Cette version ne génère pas encore de réponses automatiques.";
+}
+</script>
+</body>
+</html>
