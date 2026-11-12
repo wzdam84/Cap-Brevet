@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mathématiques - Cap Brevet</title>
+<style>
+body{margin:0;font-family:Arial;background:#f7f5ff;color:#292344}
+header{background:#6655D9;color:white;text-align:center;padding:22px}
+main{max-width:750px;margin:auto;padding:20px}
+section{background:white;padding:20px;margin:18px 0;border-radius:16px}
+h2{color:#6655D9}
+.exemple{background:#fff4dc;padding:14px;border-radius:12px}
+button{background:#6655D9;color:white;border:0;border-radius:10px;padding:12px 18px;margin:6px;cursor:pointer;font-size:16px}
+.reponse{font-weight:bold;margin-top:12px}
+a{color:#6655D9;font-weight:bold}
+</style>
+</head>
+<body>
+<header>
+<h1>🔢 Mathématiques</h1>
+<p>Objectif Brevet : tu peux y arriver !</p>
+</header>
+<main>
+<p><a href="matieres.html">← Retour aux matières</a></p>
+
+<section>
+<h2>📖 Leçon 1 : Les fractions</h2>
+<p>Une fraction représente une partie d'un tout.</p>
+<p>Elle est composée de deux nombres :</p>
+<ul>
+<li>Le numérateur : le nombre du haut.</li>
+<li>Le dénominateur : le nombre du bas.</li>
+</ul>
+<div class="exemple">
+<strong>Exemple :</strong><br>
+Dans la fraction 3/4, on partage quelque chose en 4 parts égales et on en prend 3.
+</div>
+</section>
+
+<section>
+<h2>✏️ Exemple corrigé</h2>
+<p>Combien font 1/4 + 2/4 ?</p>
+<p>On garde le même dénominateur et on additionne les numérateurs.</p>
+<div class="exemple">
+1/4 + 2/4 = 3/4
+</div>
+</section>
+
+<section>
+<h2>🧠 À toi de jouer !</h2>
+<p><strong>Question 1 :</strong> Combien font 2/5 + 1/5 ?</p>
+<button onclick="verifier(1,'a')">3/5</button>
+<button onclick="verifier(1,'b')">3/10</button>
+<button onclick="verifier(1,'c')">2/10</button>
+<div id="r1" class="reponse"></div>
+
+<hr>
+<p><strong>Question 2 :</strong> Dans la fraction 3/8, quel est le dénominateur ?</p>
+<button onclick="verifier(2,'a')">3</button>
+<button onclick="verifier(2,'b')">8</button>
+<button onclick="verifier(2,'c')">11</button>
+<div id="r2" class="reponse"></div>
+
+<hr>
+<p><strong>Question 3 :</strong> Combien font 4/7 - 2/7 ?</p>
+<button onclick="verifier(3,'a')">6/7</button>
+<button onclick="verifier(3,'b')">2/7</button>
+<button onclick="verifier(3,'c')">2/14</button>
+<div id="r3" class="reponse"></div>
+</section>
+
+<section>
+<h2>🌟 Bravo pour tes efforts !</h2>
+<p>Chaque exercice te rapproche de la réussite au brevet.</p>
+<a href="matieres.html">Retourner aux matières</a>
+</section>
+</main>
+<script>
+function verifier(q,choix){
+const bonnes={1:'a',2:'b',3:'b'};
+const messages={
+1:"Bravo ! 2/5 + 1/5 = 3/5. On garde le dénominateur.",
+2:"Exact ! Le dénominateur est le nombre du bas : 8.",
+3:"Bravo ! 4/7 - 2/7 = 2/7."
+};
+const erreurs={
+1:"Pas tout à fait. Garde le 5 et additionne 2 + 1.",
+2:"Regarde le nombre du bas de la fraction.",
+3:"Pas tout à fait. Garde le 7 et calcule 4 - 2."
+};
+document.getElementById('r'+q).textContent=
+choix===bonnes[q]?'✅ '+messages[q]:'💡 '+erreurs[q];
+}
+</script>
+</body>
+</html>
