@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Choisis ta matière - Cap Brevet</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f5ff;
+  color: #292344;
+}
+header {
+  background: #6655D9;
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+}
+header h1 { margin: 0; font-size: 29px; }
+main {
+  max-width: 850px;
+  margin: auto;
+  padding: 25px 16px;
+}
+.intro { text-align: center; margin-bottom: 28px; }
+.intro h2 { color: #6655D9; font-size: 27px; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+  gap: 14px;
+}
+button {
+  background: white;
+  border: 2px solid #e6e0ff;
+  border-radius: 17px;
+  padding: 20px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #292344;
+  cursor: pointer;
+  min-height: 120px;
+}
+button:active { background: #eeeaff; }
+.emoji { display: block; font-size: 34px; margin-bottom: 10px; }
+#resultat {
+  display: none;
+  margin-top: 25px;
+  background: #e8fff5;
+  border-radius: 17px;
+  padding: 20px;
+  text-align: center;
+}
+.retour {
+  display: inline-block;
+  margin-top: 25px;
+  color: #6655D9;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>🎓 Cap Brevet</h1>
+  <p>Le brevet, à ton rythme, à ta réussite !</p>
+</header>
+<main>
+  <div class="intro">
+    <h2>📚 Choisis ta matière !</h2>
+    <p>Sur quoi veux-tu progresser aujourd'hui ?</p>
+  </div>
+
+  <div class="grid">
+    <button onclick="choisir('Mathématiques')"><span class="emoji">🔢</span>Mathématiques</button>
+    <button onclick="choisir('Français')"><span class="emoji">✍️</span>Français</button>
+    <button onclick="choisir('Histoire-Géographie')"><span class="emoji">🌍</span>Histoire-Géo</button>
+    <button onclick="choisir('EMC')"><span class="emoji">⚖️</span>EMC</button>
+    <button onclick="choisir('Physique-Chimie')"><span class="emoji">⚗️</span>Physique-Chimie</button>
+    <button onclick="choisir('SVT')"><span class="emoji">🌱</span>SVT</button>
+    <button onclick="choisir('Technologie')"><span class="emoji">💻</span>Technologie</button>
+  </div>
+
+  <div id="resultat">
+    <h2 id="titre"></h2>
+    <p>Super choix ! 🎉 Nous allons préparer tes cours et tes exercices dans cette matière.</p>
+    <p>Contenu en préparation : reviens bientôt ! 💜</p>
+  </div>
+
+  <a class="retour" href="index.html">← Retour à l'accueil</a>
+</main>
+<script>
+function choisir(matiere) {
+  document.getElementById('titre').textContent = '📖 ' + matiere;
+  document.getElementById('resultat').style.display = 'block';
+  document.getElementById('resultat').scrollIntoView({behavior:'smooth'});
+}
+</script>
+</body>
+  </html>
+  
